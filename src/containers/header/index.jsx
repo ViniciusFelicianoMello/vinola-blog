@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
+import useOnScreen from '../../config/useOnScreen';
 import './header.sass'
 import Navlinks from '../../components/navlinks';
 
 const Header = () => {
+    const [isOnScreen, ref] = useOnScreen({ threshold: 0.1 });
     return (
-        <header className='header' id='header'>
+        <header className={`header ${isOnScreen ? 'visible' : ''}`} ref={ref}>
             <div className="header_logo">
                 <Link className={'logo_link'} to="/">
                     <img src="/svg/logo.svg" alt="vinola_logo" />

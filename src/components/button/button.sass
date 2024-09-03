@@ -1,0 +1,13 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.button_link
+    font-size: 1vw
+    text-decoration: none
+    @include mixins.gradient
+    padding: 1vw 2vw
+    border-radius: .8vw
+    font-family: variables.$font-3
+    &:hover
+        @include mixins.gradient_hover

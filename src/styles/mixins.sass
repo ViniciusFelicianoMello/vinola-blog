@@ -10,4 +10,33 @@
   padding: 0 10vw
 
 @mixin shadow-box
-  box-shadow: 0 0 3px 0px variables.$color-shadow-1
+  box-shadow: 0 0 7px 5px variables.$color-shadow-1
+
+@mixin gradient
+  background: variables.$gradient-1
+  background-size: 400% 100%
+  background-position: 0% 50%
+  animation: btn 5s linear infinite
+  color: variables.$color-bg-3
+  transition: all .5s
+
+@mixin gradient_text
+  background: variables.$gradient-1
+  background-size: 400% 100%
+  background-position: 0% 50%
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  color: transparent
+  animation: btn 5s linear infinite
+  transition: all .5s
+  color: variables.$color-bg-3
+
+@mixin gradient_hover
+  background: variables.$gradient-2
+  background-size: 400% 100%
+  background-position: 0% 50%
+  animation: btn 5s linear infinite
+  box-shadow: variables.$neon-inset-1
+  color: variables.$color-bg-5
+  transform: translateY(.3em)
